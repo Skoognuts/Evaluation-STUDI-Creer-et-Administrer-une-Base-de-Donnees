@@ -106,6 +106,8 @@ CREATE TABLE bookings (
 
 -- PRIVILEGES MANAGEMENT --
 GRANT ALL PRIVILEGES ON cinemas.* TO 'admin'@'%';
+GRANT INSERT ON cinemas.screenings TO 'manager'@'%';
+GRANT INSERT ON cinemas.bookings TO 'seller'@'%';
 GRANT SELECT ON cinemas.* TO 'lambda'@'%';
 
 FLUSH PRIVILEGES;
